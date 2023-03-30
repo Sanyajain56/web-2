@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+ <!--Goggle fonts-->
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,800&display=swap" 
+ rel="stylesheet"/>
+ 
+ <!--Font Awesome-->
+ <link
+ rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+ />
+ <!--Glidejs-->
+ <link rel="stylesheet" 
+ href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" 
+ />
+ <!--Animate Css-->
+ <link
+ rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<!--Custom CSS---->
+<link rel="stylesheet" href="stylesheet.css"/>
+<title>Disciples.com</title>
+</head> 
+<style>
+    :root{
+    --white: #fff;
+    --black:#222;
+    --pink:#f60091;
+    --grey:#444;
+    --grey2: #959595;
+    --grey-alt: #d1e2e9;
+    --yellow: #ffd800;
+    --green: #59b210;
+
+}
+ 
+*,
+* ::before,
+*::after{
+    margin: 0;
+    padding: auto;
+    box-sizing: border-box;
+}
+html{
+    box-sizing: border-box ;
+    font-size: 62.5%;
+}
+body{
+    position: relative;
+    font-size: 1.6rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--black);
+    background-color: azure;
+    z-index: -1;
+    height: 100% ;
+}
+li,
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.contanier{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Navigation */
+.navigation{
+    padding: 1.6rem;
+}
+.nav-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .fix-nav{
+        position: fixed;
+        top: 0;
+        left:0;
+        width: 100%;
+        z-index: 1200;
+        background-color: var(--white);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    }
+    .logo{
+        color: rgb(223, 52, 52);
+        font-size: 120%;
+       
+    }
+    .nav-top{
+        display: none;
+    }
+    
+    .nav-list{
+        display: flex;
+        align-items: center;
+        position: relative;
+        right: 120px;
+        font-size: 130%;
+    }
+  .nav-item::not(:last-child) {
+      margin: 0.5rem;
+    }
+    .nav-item{
+        padding: 0 1rem;
+    }
+    .nav-link{
+        position: relative;
+        display: inline-block;
+        padding: 0.5rem 0.2rem;
+        font-size: 2rem;
+        color: rgb(105, 150, 22);
+        text-transform: uppercase;
+        transition: all 500ms ease-in-out;
+}
+.nav-link::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background-color: var(--pink);
+    transition: transform 500ms;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.nav-link:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.right-top{
+
+    float: right;
+    padding: 0px;
+    font-size: 120%;
+    position: relative;
+    bottom: 30px;
+}
+
+            
+    .head{
+            height:225px;
+            width:550px;
+            background-color: white;
+            border:1px solid  black;
+            border-radius: 5px;
+            margin-top:10%;
+            margin-left: 32%;
+           
+        }
+        .des{
+            background-color: rgb(243, 164, 17);
+            color: white;
+            border: 1px solid orange;
+            border-radius: 3px;
+            font-weight: bold;
+            height: 2pc;
+            width: 4pc;
+            font-size: 18px;
+        }
+        .text{
+            border: 1px inset rgb(228, 216, 216) ;
+            height: 2pc;
+            background-color: rgb(222, 237, 243);
+            border-radius: 2px;
+            margin-top: 0%;
+        }
+        * {
+    padding : 0;
+    margin = 0;
+    font-family: sans-serif;
+}
+
+.registration-form{
+    position: relative;
+   top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    border:1px solid  black;
+}
+.registration-form p{
+    font-size: 30px;
+    text-align: center;
+    margin: 5px 0;
+    color:rgba(195, 0, 255, 0.972);
+    ;
+}
+.registration-form p{
+    font-size: 20px;
+    margin: 5px 0;
+}
+.registration-form input{
+    font-size: 16px;
+    padding: 15px 10px;
+    width: 50%;
+    border: 0;
+    border-radius: 9px;
+    border:1px solid  black;
+    margin-left: 130px;
+    
+}
+.registration-form button{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    border: 0;
+    width: 170px;
+    height: 50px;
+    border-radius: 20px;
+    background-color:rgba(224, 166, 241, 0.548);
+}
+.registration-form button:hover{
+    background-color:rgba(195, 0, 255, 0.972);
+    color:#fff;
+}
+.margin{
+    margin-left: 10px;
+}
+.margin{
+    border: 1px inset rgb(228, 216, 216) ;
+    
+    background-color: rgba(224, 166, 241, 0.548);
+    border-radius: 2px;
+    margin-top: 0%;
+}
+       
+
+</style>
+<body class="">
+    <!--Header-->
+    <header class="header" id="header">
+        <nav class="navigationBar">
+            <div class="nav-center container">
+                <a href="#home" class="logo">
+                   <img src="img/D1.jpg" alt="" text="DISCIPLES" style="float:left;width:30%;height:30%;">
+                   <h1>DISPCIPLES</h1>
+                    
+                </a>
+                <div class="nav-menu">
+                    <div class="nav-top">
+                        <div class="logo">
+                         <h1>DISPCIPLES</h1>
+                        </div>
+                        <div class="close">
+                            <i class="fas fa-times"></i> 
+                         </div>
+                     </div>
+                     <div class="right-top">
+                          <i class="fas fa-user"></i>
+                        <a href="login.html" class="active">Login</a>
+                        <a href="singup.html" class="active">SingUp</a>
+                    </div>
+                     <ul class="nav-list">
+                         <li class=" nav-item">
+                           
+                           <a href="index.html" class="nav-link scroll-link">Home</a>
+                        </li>
+                        <li class=" nav-item">
+                           <a href="#exam" class="nav-link scroll-link">Exam</a>
+                        </li>
+                        <li class=" nav-item">
+                           <a href="#admision" class="nav-link scroll-link">Addmission</a>
+                        </li>
+                        <li class=" nav-item">
+                           <a href="#studyAbroad" class="nav-link scroll-link">StudyAbroad</a>
+                        </li>
+                        <li class=" nav-item">
+                           <a href="#news" class="nav-link scroll-link">News</a>
+                        </li>
+                         <li class=" nav-item">
+                            <a href="blog.html" class="nav-link scroll-link">Blog</a>
+                         </li>
+                         <li class=" nav-item">
+                            <a href="#reviews" class="nav-link scroll-link">Reviews</a>
+                         </li>
+                         <li class=" nav-item">
+                            <a href="#aboutus" class="nav-link scroll-link">Aboutus</a>
+                         </li>
+                         </ul>
+                     
+                    </div>
+                    </div>
+                    <div class="registration-form">
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign-up to Disciples</h2>
+                        <form action="get" method="post">
+                            <p> &nbsp;&nbsp;&nbsp; Full Name :</p>
+                            <input type="text" name="fullname" placeholder="FullName" class="margin"><br><br>
+                            <p> &nbsp;&nbsp;&nbsp;User Name :</p>
+                            <input type="text" name="Username" placeholder="Username"class="margin"><br><br>
+                            <p>&nbsp;&nbsp;&nbsp;Mobile Number :</p>
+                            <input type="number" name="mobile" placeholder="XXXXXXXXXX" size="10"class="margin"><br><br>
+                            <p>&nbsp;&nbsp;&nbsp;Email :</p>
+                            <input type="email" name="email" placeholder="Email"class="margin"><br><br>
+                            <p>&nbsp;&nbsp;&nbsp;Password :</p>
+                            <input type="password" name="password" placeholder="Password"class="margin"><br><br>
+                            <button type="Submit" style="margin-left: 115px;" >Sign up</button>
+                        </form>
+                    </body>
+                        </html>

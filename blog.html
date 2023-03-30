@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+ <!--Goggle fonts-->
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,800&display=swap" 
+ rel="stylesheet"/>
+ 
+ <!--Font Awesome-->
+ <link
+ rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+ />
+ <!--Glidejs-->
+ <link rel="stylesheet" 
+ href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" 
+ />
+ <!--Animate Css-->
+ <link
+ rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<!--Custom CSS---->
+<link rel="stylesheet" href="stylesheet.css"/>
+<title>Disciples.com</title>
+</head> 
+<style>
+    :root{
+    --white: #fff;
+    --black:#222;
+    --pink:#f60091;
+    --grey:#444;
+    --grey2: #959595;
+    --grey-alt: #d1e2e9;
+    --yellow: #ffd800;
+    --green: #59b210;
+
+}
+ 
+*,
+*:: ::before,
+*::after{
+    margin: 0;
+    padding: auto;
+    box-sizing: border-box;
+}
+html{
+    box-sizing: border-box ;
+    font-size: 62.5%;
+}
+body{
+    position: relative;
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    color: var(--black);
+    background-color: azure;
+    z-index: -1;
+    height: 100% ;
+}
+li,
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.contanier{
+    max-width: 100%;
+    margin: 0 auto;
+}
+@media only screen and (max-width:1200px) {
+    .contanier{
+        padding: 0 3rem;
+    }
+}
+@media only screen and (max-width:768px) {
+    .contanier{
+        padding: 0 5rem;
+    }
+}
+
+/* Navigation */
+.navigation{
+    padding: 1.6rem;
+}
+.nav-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .fix-nav{
+        position: fixed;
+        top: 0;
+        left:0;
+        width: 100%;
+        z-index: 1200;
+        background-color: var(--white);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    }
+    .logo{
+        color: rgb(223, 52, 52);
+        font-size: 120%;
+       
+    }
+    .nav-top{
+        display: none;
+    }
+    
+    .nav-list{
+        display: flex;
+        align-items: center;
+        position: relative;
+        right: 120px;
+        font-size: 130%;
+    }
+  .nav-item::not(:last-child) {
+      margin: 0.5rem;
+    }
+    .nav-item{
+        padding: 0 1rem;
+    }
+    .nav-link{
+        position: relative;
+        display: inline-block;
+        padding: 0.5rem 0.2rem;
+        font-size: 2rem;
+        color: rgb(105, 150, 22);
+        text-transform: uppercase;
+        transition: all 500ms ease-in-out;
+}
+.nav-link::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background-color: var(--pink);
+    transition: transform 500ms;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.nav-link:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.right-top{
+
+    float: right;
+    padding: 0px;
+    font-size: 120%;
+}
+
+</style>
+<body class="">
+    <!--Header-->
+    <header class="header" id="header">
+        <nav class="navigationBar">
+            <div class="nav-center container">
+                <a href="#home" class="logo">
+                   <img src="C:\Users\sanya\Downloads\D1.jpg" alt="" text="DISCIPLES" style="float:left;width:30%;height:30%;">
+                   <h1>DISPCIPLES</h1>
+                    
+                </a>
+                <div class="nav-menu">
+                    <div class="nav-top">
+                        <div class="logo">
+                         <h1>DISPCIPLES</h1>
+                        </div>
+                        <div class="close">
+                            <i class="fas fa-times"></i> 
+                         </div>
+                     </div>
+                     <div class="right-top">
+                          <i class="fas fa-user"></i>
+                        <a href="login.html" class="active">Login</a>
+                        <a href="singup.html" class="active">SingUp</a>
+                    </div>
+                     <ul class="nav-list">
+                         <li class=" nav-item">
+                           
+                           <a href="index.html" class="nav-link scroll-link">Home</a>
+                        </li>
+                        <li class=" nav-item">
+                           <a href="#exam" class="nav-link scroll-link">Exam</a>
+                        </li>
+                        <li class=" nav-item">
+                           <a href="#admision" class="nav-link scroll-link">Addmission</a>
+                        </li>
+                        <li class=" nav-item">
+                           <a href="#studyAbroad" class="nav-link scroll-link">StudyAbroad</a>
+                        </li>
+                        <li class=" nav-item">
+                           <a href="#news" class="nav-link scroll-link">News</a>
+                        </li>
+                         <li class=" nav-item">
+                            <a href="#blog" class="nav-link scroll-link">Blog</a>
+                         </li>
+                         <li class=" nav-item">
+                            <a href="#reviews" class="nav-link scroll-link">Reviews</a>
+                         </li>
+                         <li class=" nav-item">
+                            <a href="#aboutus" class="nav-link scroll-link">Aboutus</a>
+                         </li>
+                         </ul>
+                     
+                    </div>
+                    </div>
+                    <iframe width="590" height="315"  src="https://www.youtube.com/embed/tg0mihusrCk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Py8M3ez6s5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/EIJHbeSPuug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LtrWGr_Jwzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5ySbZOrRTJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/172kxn0V_hU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/v6H6slM8fso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/33qh7he810U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/H19jiscsyHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/o0E40XwM7pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_gcgwGikYdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8BxVqbt4iAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VvrCtEydU24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RjqiGzLTy2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YXfYVyaeWns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/271RCaKwIjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XuycL4BNs-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/61s56GkdKzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bB7Bq2acBVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bEyT3XjMzkA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/sz51MTKPH9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zwzBDzn17xM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/S7NNUOY7i44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BJauU6dhVa4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+                    
+
+                
+                        
+                  
+                </body>
+                </html>
+                       
+
